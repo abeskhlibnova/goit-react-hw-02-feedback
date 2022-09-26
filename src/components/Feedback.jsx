@@ -3,7 +3,8 @@ import Section from './Section';
 import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
 import Notification from './Notification';
-import styles from './section.module.css';
+// import styles from './section.module.css';
+import { Wrapper } from './Feedback.styled';
 
 export default class Feedback extends Component {
   state = {
@@ -41,7 +42,7 @@ export default class Feedback extends Component {
     const total = this.countTotalFeedback();
     const positivePercent = this.countPositiveFeedbackPercentage('good');
     return (
-      <div className={styles.wrapper}>
+      <Wrapper>
         <Section title="Please leave feedback">
           <FeedbackOptions leaveFeedback={this.leaveFeedback} />
         </Section>
@@ -58,7 +59,7 @@ export default class Feedback extends Component {
             />
           )}
         </Section>
-      </div>
+      </Wrapper>
     );
   }
 }

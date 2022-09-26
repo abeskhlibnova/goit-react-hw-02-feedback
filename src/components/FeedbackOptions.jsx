@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './section.module.css';
+import { ButtonWrapper, Button } from './Feedback.styled';
 
 export default function FeedbackOptions({ leaveFeedback }) {
   return (
-    <div className={styles.element}>
-      <button onClick={() => leaveFeedback('good')}>Good</button>
-      <button onClick={() => leaveFeedback('neutral')}>Neutral</button>
-      <button onClick={() => leaveFeedback('bad')}>Bed</button>
-    </div>
+    <ButtonWrapper>
+      <Button onClick={() => leaveFeedback('good')}>Good</Button>
+      <Button onClick={() => leaveFeedback('neutral')}>Neutral</Button>
+      <Button onClick={() => leaveFeedback('bad')}>Bed</Button>
+    </ButtonWrapper>
   );
 }
 

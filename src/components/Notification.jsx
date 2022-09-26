@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NotificationMessage } from './Feedback.styled';
 
 export default function Notification({ message }) {
-  return <div>{message}</div>;
+  return (
+    <div>
+      <NotificationMessage>{message}</NotificationMessage>
+    </div>
+  );
 }
 
 Notification.propTypes = {

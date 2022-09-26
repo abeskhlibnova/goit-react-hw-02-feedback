@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import styles from './section.module.css';
+import { SectionBox, TitleBox } from './Feedback.styled';
 
 const Section = ({ title, children }) => {
   return (
-    <div className={styles.section}>
-      <h2 className={styles.heading}>{title}</h2>
+    <SectionBox>
+      <TitleBox>{title}</TitleBox>
       {children}
-    </div>
+    </SectionBox>
   );
 };
 
