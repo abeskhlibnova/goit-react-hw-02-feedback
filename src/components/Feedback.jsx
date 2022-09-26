@@ -13,7 +13,7 @@ export default class Feedback extends Component {
     bad: 0,
   };
 
-  leaveFeedback = propertyName => {
+  leaveFeedback = (propertyName, key) => {
     this.setState(prevState => {
       const value = prevState[propertyName];
       return {
@@ -44,7 +44,10 @@ export default class Feedback extends Component {
     return (
       <Wrapper>
         <Section title="Please leave feedback">
-          <FeedbackOptions leaveFeedback={this.leaveFeedback} />
+          <FeedbackOptions
+            leaveFeedback={this.leaveFeedback}
+            state={this.state}
+          />
         </Section>
         <Section title="Statistics">
           {!total ? (

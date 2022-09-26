@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonWrapper, Button } from './Feedback.styled';
 
-export default function FeedbackOptions({ leaveFeedback }) {
+export default function FeedbackOptions({ leaveFeedback, state }) {
   return (
     <ButtonWrapper>
-      <Button onClick={() => leaveFeedback('good')}>Good</Button>
-      <Button onClick={() => leaveFeedback('neutral')}>Neutral</Button>
-      <Button onClick={() => leaveFeedback('bad')}>Bed</Button>
+      {Object.keys(state).map(key => (
+        <Button key={key} onClick={() => leaveFeedback(key)}>
+          {key}
+        </Button>
+      ))}
     </ButtonWrapper>
   );
 }
