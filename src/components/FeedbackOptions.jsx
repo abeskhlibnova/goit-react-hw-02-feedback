@@ -16,4 +16,5 @@ export default function FeedbackOptions({ leaveFeedback, state }) {
 
 FeedbackOptions.propTypes = {
   leaveFeedback: PropTypes.func.isRequired,
+  state: PropTypes.object.isRequired,
 };
