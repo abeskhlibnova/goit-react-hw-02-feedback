@@ -13,7 +13,7 @@ export default class Feedback extends Component {
     bad: 0,
   };
 
-  leaveFeedback = (propertyName, key) => {
+  leaveFeedback = propertyName => {
     this.setState(prevState => {
       const value = prevState[propertyName];
       return {
