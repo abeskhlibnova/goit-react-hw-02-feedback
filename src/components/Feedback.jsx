@@ -46,7 +46,7 @@ export default class Feedback extends Component {
         <Section title="Please leave feedback">
           <FeedbackOptions
             leaveFeedback={this.leaveFeedback}
-            state={this.state}
+            keys={Object.keys(this.state)}
           />
         </Section>
         <Section title="Statistics">

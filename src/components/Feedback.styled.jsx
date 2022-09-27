@@ -31,6 +31,9 @@ export const Button = styled.button`
   &:not(:last-child) {
     margin-right: 20px;
   }
+  &::first-letter {
+    text-transform: uppercase;
+  }
 `;
 export const NotificationMessage = styled.p`
   text-align: center;

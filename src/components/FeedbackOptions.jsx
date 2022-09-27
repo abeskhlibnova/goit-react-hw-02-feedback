@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonWrapper, Button } from './Feedback.styled';
 
-export default function FeedbackOptions({ leaveFeedback, state }) {
+export default function FeedbackOptions({ leaveFeedback, keys }) {
   return (
     <ButtonWrapper>
-      {Object.keys(state).map(key => (
+      {keys.map(key => (
         <Button key={key} onClick={() => leaveFeedback(key)}>
           {key}
         </Button>
@@ -16,5 +16,5 @@ export default function FeedbackOptions({ leaveFeedback, state }) {
 
 FeedbackOptions.propTypes = {
   leaveFeedback: PropTypes.func.isRequired,
-  state: PropTypes.object.isRequired,
+  keys: PropTypes.arrayOf(PropTypes.string.isRequired),
 };
